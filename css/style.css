@@ -27,6 +27,9 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+header:hover .window-icon i, header:hover .window-icon span {
+    display: inline-block;
+}
 .header-icons {
     display: flex;
     margin-left: 6px;
@@ -38,6 +41,23 @@ header {
     border-radius: 50%;
     margin: 0 3px;
     border: 1px solid rgba(0,0,0,0.2);
+    position: relative;
+}
+.window-icon i, .window-icon span {
+    display: none;
+    font-size: 9px;
+    position: absolute;
+    left: 2px;
+    color: rgba(0,0,0,0.5);
+}
+.window-icon span {
+    font-size: 18px;
+    top: -6.5px;
+    left: 1.5px;
+    cursor: default;
+}
+.window-icon:nth-of-type(3) i {
+    transform: rotate(135deg);
 }
 #red {
     background: rgb(255,95,88);
@@ -90,6 +110,10 @@ header::after {
     min-width: 28px;
     text-align: center;
     margin-left: 5px;
+    cursor: pointer;
+}
+.main-btn:hover {
+    background-color: rgba(255,255,255,0.3);
 }
 .main-btn span {
     margin-left: 5px;
@@ -110,6 +134,7 @@ header::after {
 }
 .side i {
     font-size: 40px;
+    cursor: pointer;
 }
 .side:first-of-type i {
     color: rgb(127,127,127);
@@ -120,8 +145,10 @@ header::after {
 .cam-section {
     max-width: 1200px;
     width: 90%;
+    height: 85%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .cam-card {
     flex-basis: 19.5%;
@@ -164,6 +191,62 @@ footer {
     width: 100%;
     height: 60px;
     background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: space-between;
+}
+footer i {
+    color: rgb(177, 177, 177);
+}
+footer .icon-text:hover i {
+    color: white;
+}
+.mic-cam, .footer-main-icons, .close-call {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.mic-cam, .close-call {
+    width: 15%;
+    max-width: 150px;
+}
+.mic-cam .icon-text:first-of-type {
+    margin-left: 10px;
+}
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 11px;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+.icon-text i {
+    font-size: 30px;
+}
+.footer-main-icons {
+    width: 70%;
+    max-width: 700px;
+}
+.footer-main-icons .icon-text:nth-of-type(3) i {
+    transform: rotate(270deg);
+}
+.footer-main-icons .icon-text:nth-of-type(4) i {
+    color: rgb(76,200,0);
+}
+.footer-main-icons .icon-text:nth-of-type(4):hover i {
+    color: rgb(116, 255, 30);
+}
+.close-call {
+    background-color: rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+.close-call span {
+    color: rgb(232, 69, 60);
+}
+.close-call:hover {
+    background-color: rgba(255,255,255,0.2);
 }
 
 
@@ -182,11 +265,9 @@ footer {
     background: grey;
     text-align: center;
 } */
-.debug .cam-section {
-    height: 85%;
-    /* background-color: tomato; */
-    justify-content: space-around;
-}
+/* .debug .cam-section {
+    background-color: tomato;
+} */
 .debug .cam-card {
     /* height: calc(100% / 5); */
 }
