@@ -4,3 +4,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+    padding: 5px;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 20px;
+    background-color: lightgrey;
+    border-radius: 7px 7px 0 0;
+}
+
+/* main */
+ main {
+    background-color: #000;
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 0 0 9px 9px;
+}
+
+
+/* debug */
+
